@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bài tập về nhà buổi 1</title>
+    </head>
+    <body>
+        <h1>ES2025 JavaScript: Patterns và Libraries Hot Nhất Cho Developer Việt 2026</h1>
+        <h2>ES2025 ra mắt - cái gì thật sự vào spec?</h2>
+
+        <p>Tháng 6/2025, TC39 chính thức công bố ECMAScript 2025 (ES16). Nếu bạn hay follow Twitter/X dev community, chắc nghe nhiều về pipeline operator hay
+        Temporal API - nhưng cả hai vẫn chưa vào spec. Đừng để bị nhầm.</p>
+
+        <p>Cái <b>thật sự</b> vào ES2025 gồm 6 nhóm tính năng:</p>
+
+        <ul>
+            <li>Iterator Helpers - global Iterator object với map, filter, take, drop</li>
+            <li>Set Methods - union(), intersection(), difference(), symmetricDifference()</li>
+            <li>Promise.try() - bắt cả sync lẫn async errors trong một chain</li>
+            <li>RegExp improvements - flag /v, RegExp.escape(), duplicate named groups</li>
+            <li>Import Attributes - import data from "./data.json" with { type: "json" }</li>
+            <li>Float16Array - typed array 16-bit cho memory-sensitive workloads</li>
+        </ul>
+
+        <p>Node.js 22+ và các browser Chrome/Firefox/Safari release sau tháng 6/2025 đã support native. Không cần polyfill cho production nếu bạn target môi trường
+        đủ mới.</p>
+
+        <p>Pipeline operator (|>) và Temporal API? Vẫn đang ở Stage 2-3. Dùng Luxon hoặc date-fns cho date/time là lựa chọn thực tế nhất hiện tại.</p>
+
+        <hr />
+        
+        <h2>Iterator Helpers và Set Methods - dùng thật trong dự án thế nào?</h2>
+
+        <p>Hai tính năng này mình thấy practical nhất trong ES2025 cho daily work.</p>
+
+        <p><b>Iterator Helpers</b> giải quyết bài toán bạn từng phải import lodash chỉ để map + filter + slice một mảng lớn. Bây giờ không cần nữa:</p>
+
+        <p>Khác biệt quan trọng: Iterator.from() <b>lazy</b> - với mảng 10.000 item nhưng chỉ cần 100 kết quả đầu, nó không xử lý 9.900 item còn lại. Lodash chain cũng
+        làm được điều này, nhưng giờ là native.</p>
+
+        <p><b>Set Methods</b> thì đặc biệt hữu ích cho permission systems hoặc dedup realtime data:</p>
+
+        <p>Trước đây bạn phải tự viết [...setA].filter(x => setB.has(x)). Dài, khó đọc, dễ bug. Set methods native clean hơn nhiều và chain được với nhau.</p>
+
+        <hr />
+
+        <h2>Promise.try() và async/await patterns nâng cao</h2>
+
+        <p>Đây là tính năng mình mong nhất trong ES2025. Vấn đề cũ:</p>
+
+        <p>Promise.try() fix đúng điểm này:</p>
+
+        <p><strong>Pattern mạnh hơn: kết hợp với async generators cho streaming data</strong></p>
+
+        <p><b>Top-level await</b> (ES2022 nhưng hay dùng chung với ES2025 patterns) cũng clean hơn khi kết hợp Set ops:</p>
+
+        <p>Nếu bạn muốn nền tảng JavaScript vững để apply những patterns này ngay, khóa JavaScript Pro cover sâu về async/await, closures, và cách JS engine
+        thực sự hoạt động - đủ để đọc ES2025 spec mà hiểu rõ tại sao.</p>
+
+        <hr />
+
+        <h2>RxJS vs Zustand - chọn gì cho realtime web app?</h2>
+
+        <p>Mình sẽ không nói "cái nào tốt hơn" vì câu trả lời phụ thuộc vào loại app bạn đang build.</p>
+
+        <p><b>RxJS</b> (RxJS docs) là reactive programming library với Observable - phù hợp khi data flow của bạn phức tạp, nhiều nguồn, cần backpressure hay
+        timing control:</p>
+
+        <p><b>Zustand</b> (Zustand GitHub) đi theo hướng ngược lại - minimal, hooks-based, không boilerplate:</p>
+
+        <p>Bảng so sánh thực tế:</p>
+
+        <p>Cho hầu hết React app Việt Nam (dashboard, e-commerce, admin panel) - Zustand là đủ và ít đau đầu hơn. RxJS chỉ worth it khi bạn xây multiplayer game,
+        collaborative editor, hoặc financial live feed cần control timing cực chính xác.</p>
+
+        <p>Nếu bạn đang build với ReactJS và chưa rõ cách quản lý state từ cơ bản, khóa Xây Dựng Website với ReactJS sẽ giúp bạn hiểu đúng từ component state đến
+        context trước khi nhảy vào Zustand.</p>
+
+        <hr />
+
+        <h2>Xây realtime dashboard với ES2025 + Zustand: ví dụ thực tế</h2>
+
+        <p>Mình sẽ ghép tất cả những gì đã nói vào một mini case study: realtime stock price dashboard nhận data qua WebSocket.</p>
+
+        <p>Download file demo đầy đủ tại đây: Tải file demo Realtime Dashboard</p>
+
+        <p>Pattern này cho phép bạn:</p>
+
+        <ul>
+            <li>Không duplicate symbol khi user thêm subscription nhiều lần (Set.union)</li>
+            <li>Không bị missed error khi WebSocket init fail sync (Promise.try)</li>
+            <li>Chỉ xử lý đúng 10 item cần thiết từ hàng nghìn price entries (Iterator.take)</li>
+        </ul>
+
+        <p>Bạn đã có đủ building blocks. Bước tiếp:</p>
+
+        <ol>
+            <li>Cài Node.js 22+ hoặc bật Chrome mới nhất để test native (không cần polyfill)</li>
+            <li>Thêm Zustand vào project React hiện tại, migrate một slice state nhỏ trước</li>
+            <li>Thử Iterator.from() thay lodash chain trong một data transformation function</li>
+        </ol>
+
+        <p>Gặp vướng mắc ở phần nào, drop comment xuống dưới - mình đọc hết.</p>
+    </body>
+</html>
