@@ -1,0 +1,145 @@
+:lang(vi) {
+    color: #0f172a;
+}
+
+::selection {
+    color: #0f172a;
+    background: #bfdbfe;
+};
+
+.main-nav ul a {
+    color: #1d4ed8;
+}
+
+.main-nav > ul > li > a {
+    background: #f1f5f9;
+}
+
+h2 ~ p {
+  /* Styles for every <p> that comes after an <h2> */
+  color: #0f172a;
+}
+
+h2 + p {
+    color: #64748b;
+}
+
+.author a {
+    color: #f97316;
+}
+
+article {
+    background: white;
+    .post-title {
+        color: #0f172a;
+    }
+    .badge::before {
+        content: '';
+        margin-right: 5px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #ef4444;
+        display: inline-block;
+    };
+    a {
+        color: #2563eb;
+    };
+    a:visited {
+        color: #9333ea;
+    };
+    a:hover {
+        color: #1e40af;
+    };
+    a:active {
+        color: #1e3a8a;
+    };
+    .lead::first-line {
+        color: #0f172a;
+    };
+    .lead::first-letter {
+        color: #2563eb;
+    };
+    .quote::before,
+    .quote::after {
+        content: '"';
+        color: #cbd5e1;
+    };
+    .comparison-table thead th {
+        color: white;
+        background: #0f172a;
+    };
+    .comparison-table tr:nth-child(odd) td {
+        background: #f8fafc;
+    };
+    .comparison-table tr:nth-child(even) td {
+        background: white;
+    };
+    .comparison-table tr:last-child td {
+        background: #dbeafe;
+    };
+    .comparison-table tr[data-priority="high"] td {
+        background: #fee2e2;
+    };
+    .feature-list li::marker {
+        color: #2563eb;
+    };
+    .feature-list li:first-child {
+        color: #16a34a;
+    };
+    .feature-list li:last-child {
+        color: #dc2626;
+    };
+    .feature-list li:nth-child(3) {
+        background: #fef3c7;
+    };
+    &.featured {
+        background: #fefce8;
+    };
+    &:hover {
+        background: #f8fafc;
+    };
+    &:hover  .post-title{
+        color: #2563eb;
+    };
+}
+
+aside .widget:not(:last-child) {
+    background: white;
+}
+
+input:focus {
+    background: #eff6ff;
+}
+
+input:required {
+    background: #fffbeb;
+};
+
+a[href^="https"] {
+    color: #2563eb;
+}
+
+a[href$=".pdf"] {
+    color: #ea580c;
+}
+
+.btn {
+    background: #e2e8f0;
+}
+
+.btn-primary {
+    color: white;
+    background: #2563eb;
+    &:hover {
+        background: #3b82f6;
+    };
+    &:active {
+        background: #1d4ed8;
+    }
+};
+
+button:disabled {
+    color: #cbd5e1;
+    background-color: #94a3b8 !important;
+}
