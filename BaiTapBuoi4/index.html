@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bài tập buổi 4</title>
+
+        <style>
+            body {
+                margin: 0;
+                background: #f9fafb;
+            }
+            
+            h1 {
+                margin-top: 0;
+                padding: 10px 0;
+                color: #fff;
+                background: #e58625;
+            }
+
+            label {
+                background: #eff2fe;    
+            }
+
+            #light:checked + label,
+            #light:checked ~ .results .theme-light {
+                color: #8b5e00;
+                background: #fff8cc;
+            }
+
+            #dark:checked + label,
+            #dark:checked ~ .results .theme-dark {
+                color: #f9fafb;
+                background: #111827;
+            }
+
+            #red:checked + label,
+            #red:checked ~ .results .color-red {
+                color: #991b1b;
+                background: #fee2e2;
+            }
+
+            #blue:checked + label,
+            #blue:checked ~ .results .color-blue {
+                color: #1d4ed8;
+                background: #dbeafe;
+            }
+
+            #green:checked + label,
+            #green:checked ~ .results .color-green {
+                color: #166534;
+                background: #dcfce7;
+            }
+
+            #vi:checked + label,
+            #vi:checked ~ .results .language-vi {
+                color: #166534;
+                background: #bbf7d0;
+            }
+
+            #en:checked + label,
+            #en:checked ~ .results .language-en {
+                color: #1d4ed8;
+                background: #bfdbfe;
+            }
+
+            #advanced:checked + label,
+            .options:has(#advanced:checked) ~ .results .options-advanced {
+                color: #92400e;
+                background: #fef3c7;
+            }
+
+            #eco:checked + label,
+            .options:has(#eco:checked) ~ .results .options-eco {
+                color: #15803d;
+                background: #bbf7d0;
+            }
+
+            #warning:checked + label,
+            .options:has(#warning:checked) ~ .results .options-warning {
+                color: #b91c1c;
+                background: #fee2e2;
+            }
+
+            .options {
+                display: flex;
+                align-items: center;
+            }
+
+            .options input {
+                margin-right: 5px;
+            }
+
+            .options label:not(:last-child) {
+                margin-right: 10px;
+            }
+
+            .results p {
+                padding: 10px 0;
+                color: #ada6b2;
+                background: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Trung tâm cấu hình giao diện (Demo)</h1>
+        <p>Chọn giao diện (Theme):</p>
+
+        <input type="radio" name="theme" id="light" value="Light">
+        <label for="light">Light</label>
+
+        <input type="radio" name="theme" id="dark" value="Dark">
+        <label for="dark">Dark</label>
+
+        <p>Chọn màu chủ đạo (Color):</p>
+
+        <input type="radio" name="color" id="red" value="Red">
+        <label for="red">Red</label>
+
+        <input type="radio" name="color" id="blue" value="Blue">
+        <label for="blue">Blue</label>
+
+        <input type="radio" name="color" id="green" value="Green">
+        <label for="green">Green</label>
+
+        <p>Chọn ngôn ngữ (Language):</p>
+
+        <input type="radio" name="language" id="vi" value="VI">
+        <label for="vi">VI</label>
+        <input type="radio" name="language" id="en" value="EN">
+        <label for="en">EN</label>
+        
+        
+        <p>Tuỳ chọn bổ sung (Options - Checkbox):</p>
+
+        <form class="options">
+            <input type="checkbox" name="options" id="advanced" value="Advanced">
+            <label for="advanced">Hiển thị mô tả nâng cao</label><br>
+
+            <input type="checkbox" name="options" id="eco" value="Eco">
+            <label for="eco">Bật chế độ Eco</label><br>
+
+            <input type="checkbox" name="options" id="warning" value="Warning">
+            <label for="warning">Hiển thị cảnh báo quan trọng</label>
+        </form>
+
+        <div class="results">
+            <p class="theme-light">Theme Light: Giao diện sáng, chữ đen.</p>
+            <p class="theme-dark">Theme Dark: Giao diện tối, chữ sáng.</p>
+            <p class="color-red">Màu Red: được nhấn mạnh khi chọn Red.</p>
+            <p class="color-blue">Màu Blue: được nhấn mạnh khi chọn Blue.</p>
+            <p class="color-green">Màu Green: được nhấn mạnh khi chọn Green.</p>
+            <p class="language-vi">[VI] Xin chào bạn! Khi chọn VI, dòng này rõ hơn.</p>
+            <p class="language-en">[EN] Hello World! Khi chọn EN, dòng này rõ hơn.</p>
+            <p class="options-advanced">Mô tả nâng cao: giải thích kỹ hơn về các lựa chọn đang ảnh hưởng giao diện</p>
+            <p class="options-eco">Chế độ Eco: mô phỏng trạng thái tiết kiệm tài nguyên cho giao diện.</p>
+            <p class="options-warning">Cảnh báo quan trọng: khu vực dùng để nhấn mạnh thông tin hệ thống.</p>
+        </div>
+    </body>
+</html>
