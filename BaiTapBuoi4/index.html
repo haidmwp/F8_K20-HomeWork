@@ -65,26 +65,21 @@
             }
 
             #advanced:checked + label,
-            .options:has(#advanced:checked) ~ .results .options-advanced {
+            #advanced:checked ~ .results .options-advanced {
                 color: #92400e;
                 background: #fef3c7;
             }
 
             #eco:checked + label,
-            .options:has(#eco:checked) ~ .results .options-eco {
+            #eco:checked ~ .results .options-eco {
                 color: #15803d;
                 background: #bbf7d0;
             }
 
             #warning:checked + label,
-            .options:has(#warning:checked) ~ .results .options-warning {
+            #warning:checked ~ .results .options-warning {
                 color: #b91c1c;
                 background: #fee2e2;
-            }
-
-            .options {
-                display: flex;
-                align-items: center;
             }
 
             .options input {
@@ -133,16 +128,14 @@
         
         <p>Tuỳ chọn bổ sung (Options - Checkbox):</p>
 
-        <form class="options">
-            <input type="checkbox" name="options" id="advanced" value="Advanced">
-            <label for="advanced">Hiển thị mô tả nâng cao</label><br>
+        <input type="checkbox" name="options" id="advanced" value="Advanced">
+        <label for="advanced">Hiển thị mô tả nâng cao</label>
 
-            <input type="checkbox" name="options" id="eco" value="Eco">
-            <label for="eco">Bật chế độ Eco</label><br>
+        <input type="checkbox" name="options" id="eco" value="Eco">
+        <label for="eco">Bật chế độ Eco</label>
 
-            <input type="checkbox" name="options" id="warning" value="Warning">
-            <label for="warning">Hiển thị cảnh báo quan trọng</label>
-        </form>
+        <input type="checkbox" name="options" id="warning" value="Warning">
+        <label for="warning">Hiển thị cảnh báo quan trọng</label>
 
         <div class="results">
             <p class="theme-light">Theme Light: Giao diện sáng, chữ đen.</p>

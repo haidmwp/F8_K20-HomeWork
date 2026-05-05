@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bài tập buổi 5</title>
+        <style>
+            .square {
+                width: 100px;
+                height: 100px;
+                border: solid 3px #d15740;
+            }
+
+            .rectangle {
+                width: 200px;
+                height: 100px;
+                border: solid 3px #4e8ed4;
+            }
+
+            .triangle-up {
+                width: 0;
+                height: 0;
+                border-left: 50px solid transparent;
+                border-right: 50px solid transparent;
+                border-bottom: solid 100px #6dc978;
+            }
+
+            .triangle-down {
+                width: 0;
+                height: 0;
+                border-left: 50px solid transparent;
+                border-right: 50px solid transparent;
+                border-top: solid 100px #e3a031;
+            }
+
+            .triangle-left {
+                width: 0;
+                height: 0;
+                border-top: 50px solid transparent;
+                border-bottom: 50px solid transparent;
+                border-right: solid 100px #905cb2;
+            }
+
+            .triangle-right {
+                width: 0;
+                height: 0;
+                border-top: 50px solid transparent;
+                border-bottom: 50px solid transparent;
+                border-left: solid 100px #d48332;
+            }
+
+            .trapezoid {
+                width: 100px;
+                height: 0;
+                border-bottom: solid 75px #61b99d;
+                border-left: solid 50px transparent;
+                border-right: solid 50px transparent;
+            }
+
+            .triangle-wide {
+                width: 0;
+                height: 0;
+                border-left: 50px solid transparent;
+                border-right: 50px solid transparent;
+                border-bottom: solid 40px #3a485d;
+            }
+
+            .triangle-sharp {
+                width: 0;
+                height: 0;
+                border-left: 40px solid transparent;
+                border-right: 40px solid transparent;
+                border-bottom: solid 100px #ad4430;
+            }
+
+            .triangle-isosceles {
+                width: 0;
+                height: 0;
+                border-left: 40px solid transparent;
+                border-right: 40px solid transparent;
+                border-bottom: solid 70px #c05c19;
+            }
+
+            .arrow-right {
+                width: 0;
+                height: 0;
+                border-top: 40px solid transparent;
+                border-bottom: 40px solid transparent;
+                border-left: solid 70px #529e86;
+            }
+
+            .arrow-left {
+                width: 0;
+                height: 0;
+                border-top: 40px solid transparent;
+                border-bottom: 40px solid transparent;
+                border-right: 70px solid #8348a9;
+            }
+
+            .ribbon {
+                width: 140px;
+                height: 72px;
+                background-color: #d15740;
+                position: relative;
+            }
+
+            .ribbon::after {
+                top: 0;
+                right: 0;
+                content: '';
+                width: 0;
+                height: 0;
+                border-top: 36px solid transparent;
+                border-bottom: 36px solid transparent;
+                border-right: 48px solid #fff;
+                position: absolute;
+            }
+
+            .f8-wrapper div {
+                width: 120px;
+                height: 190px;
+                background: #d15841;
+                display: inline-block;
+            }
+
+            .f8-wrapper .f,
+            .f8-wrapper .eight {
+                position: relative;
+            }
+
+            .f8-wrapper .f {
+                margin-right: 30px;
+            }
+
+            .f8-wrapper .f::before,
+            .f8-wrapper .f::after,
+            .f8-wrapper .eight::before,
+            .f8-wrapper .eight::after {
+                content: '';
+                background: #fff;
+                position: absolute;
+            }
+
+            .f8-wrapper .f::before {
+                width: 90px;
+                height: 50px;
+                top: 30px;
+                right: 0;
+            }
+
+            .f8-wrapper .f::after {
+                width: 90px;
+                height: 80px;
+                right: 0;
+                bottom: 0;
+            }
+
+            .f8-wrapper .eight::before {
+                width: 80px;
+                height: 50px;
+                top: 30px;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+
+            .f8-wrapper .eight::after {
+                width: 80px;
+                height: 60px;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <p>1. Hình vuông</p>
+        <div class="square">
+
+        </div>
+
+        <p>2. Hình chữ nhật</p>
+        <div class="rectangle">
+
+        </div>
+
+        <p>3. Tam giác lên</p>
+        <div class="triangle-up">
+
+        </div>
+
+        <p>4. Tam giác xuống</p>
+        <div class="triangle-down">
+
+        </div>
+
+        <p>5. Tam giác trái</p>
+        <div class="triangle-left">
+
+        </div>
+
+        <p>6. Tam giác phải</p>
+        <div class="triangle-right">
+
+        </div>
+
+        <p>7. Hình thang</p>
+        <div class="trapezoid">
+
+        </div>
+
+        <p>8. Tam giác rộng</p>
+        <div class="triangle-wide">
+
+        </div>
+
+        <p>9. Tam giác nhọn</p>
+        <div class="triangle-sharp">
+
+        </div>
+
+        <p>10. Tam giác cân</p>
+        <div class="triangle-isosceles">
+
+        </div>
+
+        <p>11. Mũi tên phải</p>
+        <div class="arrow-right">
+
+        </div>
+
+        <p>12. Mũi tên trái</p>
+        <div class="arrow-left">
+
+        </div>
+
+        <p>13. Ribbon/Lá cờ</p>
+        <div class="ribbon">
+
+        </div>
+
+        <p>14. F8</p>
+        <div class="f8-wrapper">
+            <div class="f">
+
+            </div>
+            <div class="eight">
+
+            </div>
+        </div>
+    </body>
+</html>
