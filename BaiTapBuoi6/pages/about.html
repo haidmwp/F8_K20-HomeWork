@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trang giới thiệu</title>
+
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <style>
+            .main-navigation ul,
+            .socials-wrapper {
+                margin-left: 0;
+                margin-bottom: 0;
+                padding-left: 0;
+            }
+
+            .main-navigation ul li,
+            .socials-wrapper li {
+                list-style: none;
+                display: inline-block;
+            }
+
+            .main-navigation ul li:not(:last-child),
+            .socials-wrapper li:not(:last-child) {
+                margin-right: 8px;
+            }
+
+            .main-navigation {
+                margin-bottom: 12px;
+            }
+
+            .about,
+            .quote,
+            .timeline,
+            .interest,
+            .video {
+                padding: 50px 0;
+            }
+
+            .avatar-wrapper {
+                text-align: center;
+            }
+
+            .avatar {
+                margin: 0 auto;
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
+            }
+
+            #introVideo {
+                width: 640px;
+                height: 360px;
+                object-fit: cover;
+            }
+
+            .icon-social {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="top">
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="../index.html">🏠 Home</a></li>
+                    <li><a href="about.html">👤 About</a></li>
+                    <li><a href="skills.html">💡 Skills</a></li>
+                    <li><a href="projects.html">📁 Projects</a></li>
+                    <li><a href="blog.html">📝 Blog</a></li>
+                    <li><a href="contact.html">📧 Contact</a></li>
+                </ul>
+            </nav>
+        </header><!-- #top -->
+        <div class="content-wrapper">
+            <h1>Trang giới thiệu</h1>
+            <div class="about">
+                <h2>About</h2>
+                <div class="avatar-wrapper">
+                    <img alt="avatar" class="avatar" src="../images/avatar.jpg" />
+                </div>
+                <p>Chào bạn, tôi là một chuyên gia lập trình <strong>WordPress (WordPress Developer)</strong> với niềm đam mê tạo ra các trang web mạnh mẽ, tối ưu và thân thiện với
+                người dùng. Tôi chuyên <em>thiết kế, phát triển</em> và bảo trì theme/plugin, tùy chỉnh mã nguồn <abbr>PHP/MySQL</abbr> để đáp ứng chính xác nhu cầu kinh doanh của khách
+                hàng.</p>
+                <p>Tôi tin rằng một trang web tốt không chỉ đẹp mà phải hoạt động hiệu quả. Tôi luôn chú trọng đến trải nghiệm người dùng <mark>(UX)</mark> và khả năng quản trị
+                dễ dàng cho khách hàng sau khi bàn giao.</p>
+                <p><strong>Các Kỹ Năng Và Thế Mạnh Chính:</strong></p>
+                <ul>
+                    <li>Phát triển Web WordPress: Thành thạo cài đặt, tùy biến theme và phát triển plugin theo yêu cầu.</li>
+                    <li>Ngôn ngữ lập trình: Sử dụng tốt <abbr>PHP, MySQL, HTML5, CSS3, JavaScript</abbr>.</li>
+                    <li>Tối ưu hóa <abbr>(SEO)</abbr>: Tối ưu hóa website WordPress thân thiện với công cụ tìm kiếm và tăng tốc độ tải trang.</li>
+                    <li>Thiết kế <abbr>(UI/UX)</abbr>: Xây dựng giao diện hiện đại, thân thiện trên di động (Responsive).</li>
+                    <li>Quản lý: Có kinh nghiệm làm việc với các hệ quản trị nội dung (CMS) và cơ sở dữ liệu.</li>
+                </ul>
+                <p><strong>Mục Tiêu:</strong></p>
+                <p>Mong muốn mang lại giải pháp website WordPress hiệu quả, giúp nâng cao nhận diện thương hiệu và đạt được các mục tiêu kinh doanh của khách hàng.</p>
+            </div><!-- .about -->
+            <div class="quote">
+                <h2>Trích dẫn yêu thích</h2>
+                <blockquote>"Mọi người nên học lập trình máy tính, bởi vì nó dạy bạn cách tư duy."</blockquote>
+                <cite>Steve Jobs</cite>
+            </div><!-- .quote -->
+            <div class="timeline">
+                <h2>Timeline học vấn/kinh nghiệm</h2>
+                <div class="timeline-content">
+                    <p>06/2014 - 06/2015</p>
+                    <p>C5 Group</p>
+                    <p>Wordpress Developer</p>
+                </div>
+                <hr />
+                <div class="timeline-content">
+                    <p>11/2019 - 04/2020</p>
+                    <p>Sota JSC</p>
+                    <p>Wordpress Developer</p>
+                </div>
+                <hr />
+                <div class="timeline-content">
+                    <p>06/2022 - 06/202</p>
+                    <p>Wecan Group</p>
+                    <p>Wordpress Developer</p>
+                </div>
+            </div><!-- .timeline -->
+            <div class="interest">
+                <h2>Sở thích</h2>
+                <ul>
+                    <li>🎶 Nghe nhạc</li>
+                    <li>🎮 Chơi game</li>
+                    <li>🎥 Xem phim</li>
+                </ul>
+            </div><!-- .interest -->
+            <div class="video">
+                <h2>Video</h2>
+                <video playsinline muted controls loop poster="../videos/poster.jpg" id="introVideo">
+                    <source src="../videos/intro.mp4" type="video/mp4">
+                </video>
+            </div><!-- .video -->
+        </div><!-- .content-wrapper -->
+        <footer class="site-footer">
+            <div class="footer-copyright">
+                <span>Copyright 2016 © HaiDM</span>
+            </div><!-- .footer-copyright -->
+            <div class="footer-socials">
+                <ul class="socials-wrapper">
+                    <li><a target="_blank" href="#"><img alt="facebook" class="icon-social" src="../images/icon-facebook.png" /></a></li>
+                    <li><a target="_blank" href="#"><img alt="instagram" class="icon-social" src="../images/icon-instagram.png" /></a></li>
+                    <li><a target="_blank" href="#"><img alt="twitter" class="icon-social" src="../images/icon-twitter.jpg" /></a></li>
+                    <li><a target="_blank" href="#"><img alt="github" class="icon-social" src="../images/icon-github.png" /></a></li>
+                    <li><a target="_blank" href="#"><img alt="linkedin" class="icon-social" src="../images/icon-linkedin.png" /></a></li>
+                </ul>
+                <a href="#top">Lên đầu trang</a>
+            </div><!-- .footer-socials -->
+        </footer><!-- .site-footer -->
+    </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trang chủ</title>
+        <style>
+            .main-navigation ul,
+            .socials-wrapper {
+                margin-left: 0;
+                margin-bottom: 0;
+                padding-left: 0;
+            }
+
+            .main-navigation ul li,
+            .socials-wrapper li {
+                list-style: none;
+                display: inline-block;
+            }
+
+            .main-navigation ul li:not(:last-child),
+            .socials-wrapper li:not(:last-child) {
+                margin-right: 8px;
+            }
+
+            .main-navigation {
+                margin-bottom: 12px;
+            }
+
+            .hero-section,
+            .about-preview,
+            .skills-preview,
+            .projects-preview {
+                padding: 50px 0;
+            }
+
+            .hero-section {
+                background: url('images/hero-bg.jpg') no-repeat center center;
+                background-size: cover;
+            }
+
+            .avatar-wrapper {
+                text-align: center;
+            }
+
+            .avatar {
+                margin: 0 auto;
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
+            }
+
+            .icon-skill {
+                width: 100px;
+                height: 100px;
+                object-fit: contain;
+            }
+
+            .img-project {
+                width: 300px;
+                height: 200px;
+                object-fit: contain;
+            }
+            
+            .icon-social {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="top">
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="pages/about.html">👤 About</a></li>
+                    <li><a href="pages/skills.html">💡 Skills</a></li>
+                    <li><a href="pages/projects.html">📁 Projects</a></li>
+                    <li><a href="pages/blog.html">📝 Blog</a></li>
+                    <li><a href="pages/contact.html">📧 Contact</a></li>
+                </ul>
+            </nav>
+        </header><!-- #top -->
+        <div class="content-wrapper">
+            <h1>Trang chủ</h1>
+            <div class="hero-section">
+                <h2><strong>Đặng Minh Hải</strong></h2>
+                <p><em>Wordpress Developer</em></p>
+                <button><a href="pages/projects.html">Xem dự án</a></button>
+                <button><a download href="files/cv.pdf">Tải CV</a></button>
+            </div><!-- .hero-section -->
+            <div class="about-preview">
+                <h2>About Preview</h2>
+                <div class="avatar-wrapper">
+                    <img alt="avatar" class="avatar" src="images/avatar.jpg" />
+                </div>
+                <p>Chào bạn, tôi là một chuyên gia lập trình <strong>WordPress (WordPress Developer)</strong> với niềm đam mê tạo ra các trang web mạnh mẽ, tối ưu và thân thiện với
+                người dùng. Tôi chuyên thiết kế, phát triển và bảo trì theme/plugin, tùy chỉnh mã nguồn <em>PHP/MySQL</em> để đáp ứng chính xác nhu cầu kinh doanh của khách
+                hàng.</p>
+                <p>Tôi tin rằng một trang web tốt không chỉ đẹp mà phải hoạt động hiệu quả. Tôi luôn chú trọng đến trải nghiệm người dùng <mark>(UX)</mark> và khả năng quản trị
+                dễ dàng cho khách hàng sau khi bàn giao.</p>
+                <button><a href="pages/about.html">Đọc thêm</a></button>
+            </div><!-- .about-preview -->
+            <div class="skills-preview">
+                <h2>Skills Preview</h2>
+                <div class="skill-html">
+                    <img alt="html" class="icon-skill" src="images/skill-html.jpg" />
+                    <h3>HTML</h3>
+                    <p>HTML là xương sống của mọi trang web, phối hợp cùng CSS (định dạng) và JavaScript (tương tác) để tạo nên trải nghiệm web hoàn chỉnh.</p>
+                </div>
+                <div class="skill-css">
+                    <img alt="css" class="icon-skill" src="images/skill-css.png" />
+                    <h3>CSS</h3>
+                    <p>CSS (Cascading Style Sheets) là ngôn ngữ định kiểu được sử dụng để mô tả cách trình bày và giao diện của các tài liệu viết bằng ngôn ngữ đánh dấu
+                    như HTML hoặc XML.</p>
+                </div>
+                <div class="skill-js">
+                    <img alt="js" class="icon-skill" src="images/skill-js.jpg" />
+                    <h3>JS</h3>
+                    <p>JavaScript (JS) là ngôn ngữ lập trình kịch bản (scripting language) phổ biến nhất thế giới, được thiết kế để tạo ra các tương tác động, mang lại
+                    trải nghiệm sống động cho website. Nó chạy chủ yếu trên trình duyệt (client-side), biến HTML/CSS tĩnh thành giao diện trực quan và hoạt động nhúng
+                    trực tiếp vào file HTML.</p>
+                </div>
+            </div><!-- .skills-preview -->
+            <div class="projects-preview">
+                <h2>Projects Preview</h2>
+                <div class="project">
+                    <img al="project 1" class="img-project" src="images/project1.jpg" />
+                    <h3>Statek</h3>
+                    <p>Thành lập năm 2023, Statek là đối tác công nghệ đồng hành cùng doanh nghiệp trong việc xây dựng hệ sinh thái số kết nối, hiệu quả và sẵn sàng cho
+                    tương lai. Chúng tôi kết hợp hạ tầng CNTT hiện đại, các nền tảng ứng dụng doanh nghiệp hợp nhất và những giải pháp chuyên biệt theo ngành nhằm hỗ trợ
+                    tổ chức trong suốt hành trình chuyển đổi số toàn diện.</p>
+                </div>
+                <div class="project">
+                    <img al="project 2" class="img-project" src="images/project2.jpg" />
+                    <h3>Hop Luc MEP</h3>
+                    <p>Trong dòng chảy không ngừng của nền kinh tế hiện đại, quá trình đô thị hóa và công nghiệp hóa đã và đang đặt ra những yêu cầu ngày càng khắt khe
+                    đối với hệ thống hạ tầng kỹ thuật, đặc biệt là lĩnh vực cơ điện. Nhận thức sâu sắc vai trò của ngành nghề, Công ty Cổ phần Cơ điện Hợp Lực ra đời với
+                    sứ mệnh cung cấp những giải pháp cơ điện toàn diện, chất lượng cao và bền vững cho các công trình hiện đại.</p>
+                </div>
+                <div class="project">
+                    <img al="project 3" class="img-project" src="images/project3.jpg" />
+                    <h3>PMD Model</h3>
+                    <p>Established in 2007 by Graphic Designer Phong Dang , his background also Fashion stylist and Makeup Artist , all those abilities helping him a lot
+                    for supporting Model’s work , PMD Model Management today is known as a high professional model agency.</p>
+                </div>
+            </div><!-- .projects-preview -->
+        </div><!-- .content-wrapper -->
+        <footer class="site-footer">
+            <div class="footer-copyright">
+                <span>Copyright 2016 © HaiDM</span>
+            </div><!-- .footer-copyright -->
+            <div class="footer-socials">
+                <ul class="socials-wrapper">
+                    <li><a target="_blank" href="#"><img alt="facebook" class="icon-social" src="images/icon-facebook.png" /></a></li>
+                    <li><a target="_blank" href="#"><img alt="instagram" class="icon-social" src="images/icon-instagram.png" /></a></li>
+                    <li><a target="_blank" href="#"><img alt="twitter" class="icon-social" src="images/icon-twitter.jpg" /></a></li>
+                    <li><a target="_blank" href="#"><img alt="github" class="icon-social" src="images/icon-github.png" /></a></li>
+                    <li><a target="_blank" href="#"><img alt="linkedin" class="icon-social" src="images/icon-linkedin.png" /></a></li>
+                </ul>
+                <a href="#top">Lên đầu trang</a>
+            </div><!-- .footer-socials -->
+        </footer><!-- .site-footer -->
+    </body>
+</html>
