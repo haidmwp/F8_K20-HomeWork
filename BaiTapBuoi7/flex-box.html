@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flexbox</title>
+
+        <style>
+            .container {
+                width: 600px;
+                height: 200px;
+                border: solid 1px #E53C21;
+                display: flex;
+            }
+
+            .container:not(:last-child) {
+                margin-bottom: 50px;
+            }
+
+            .container-1,
+            .container-2 {
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .container-2 {
+                flex-direction: row-reverse;
+            }
+
+            .container-3 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container-3 .box:nth-child(1) {
+                margin-bottom: 20px;
+            }
+
+            .container-3 .box:nth-child(2) {
+                margin-bottom: 50px;
+            }
+
+            .container-4,
+            .container-9 {
+                align-items: center;
+                justify-content: center;
+            }
+
+            .container-4 .box:nth-child(1) {
+                margin-right: 10px;
+            }
+
+            .container-4 .box:nth-child(2) {
+                margin-right: 40px;
+            }
+
+            .container-5 {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column-reverse;
+            }
+
+            .container-6 {
+                justify-content: space-between;
+            }
+
+            .container-7 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container-7 .box:nth-child(1) {
+                margin-bottom: 60px;
+            }
+
+            .container-7 .box:nth-child(2) {
+                margin-bottom: 20px;
+            }
+
+            .container-8 .box:nth-child(1),
+            .container-8 .box:nth-child(3) {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+
+            .container-8 .box:nth-child(2) {
+                margin: auto;
+            }
+
+            .container-9 .box:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            .container-9 .box:nth-child(1) {
+                margin-top: -60px;
+            }
+
+            .container-9 .box:nth-child(3) {
+                margin-bottom: -60px;
+            }
+
+            .container-10 .box:nth-child(1) {
+                margin-bottom: auto;
+            }
+
+            .container-10 .box:nth-child(2) {
+                margin: auto;
+            }
+
+            .container-10 .box:nth-child(3) {
+                margin-top: auto;
+            }
+
+            .container .box {
+                width: 60px;
+                height: 60px;
+                color: #FFF;
+                background: #5981B1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <p><strong>Container 1</strong></p>
+        <div class="container container-1">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+        </div><!-- .container-1 -->
+
+        <p><strong>Container 2</strong></p>
+        <div class="container container-2">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+        </div><!-- .container-2 -->
+
+        <p><strong>Container 3</strong></p>
+        <div class="container container-3">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+        </div><!-- .container-3 -->
+
+        <p><strong>Container 4</strong></p>
+        <div class="container container-4">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+        </div><!-- .container-4 -->
+
+        <p><strong>Container 5</strong></p>
+        <div class="container container-5">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+        </div><!-- .container-5 -->
+
+        <p><strong>Container 6</strong></p>
+        <div class="container container-6">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+        </div><!-- .container-6 -->
+
+        <p><strong>Container 7</strong></p>
+        <div class="container container-7">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+        </div><!-- .container-7 -->
+
+        <p><strong>Container 8</strong></p>
+        <div class="container container-8">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+        </div><!-- .container-8 -->
+
+        <p><strong>Container 9</strong></p>
+        <div class="container container-9">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+        </div><!-- .container-9 -->
+
+        <p><strong>Container 10</strong></p>
+        <div class="container container-10">
+            <div class="box">
+                1
+            </div>
+            <div class="box">
+                2
+            </div>
+            <div class="box">
+                3
+            </div>
+        </div><!-- .container-10 -->
+    </body>
+</html>
