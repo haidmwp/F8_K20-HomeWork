@@ -1,0 +1,135 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: #ebf5fe;
+}
+
+.content-wrapper {
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 350px);
+    gap: 20px;
+}
+
+.content {
+    padding: 20px;
+    border-radius: 8px;
+    border: 3px solid #e0e0e0;
+    background: #fff;
+    transition: .5s;
+}
+
+.title-wrapper {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.content-icon-wrapper {
+    margin-right: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #333;
+}
+
+.content-icon-wrapper span {
+    font-size: 32px;
+    color: #fff;
+}
+
+.content-1 .content-icon-wrapper {
+    background: #ff6b6b;
+}
+
+.content-2 .content-icon-wrapper {
+    background: #4ecdc4;
+}
+
+.content-3 .content-icon-wrapper {
+    background: #f9a825;
+}
+
+.content-4 .content-icon-wrapper {
+    background: #5e9cff;
+}
+
+.content-5 .content-icon-wrapper {
+    background: #9b59b6;
+}
+
+.content-6 .content-icon-wrapper {
+    background: #7cb342;
+}
+
+.content-1:hover {
+    border: solid 3px #ff6b6b;
+}
+
+.content-2:hover {
+    border: solid 3px #4ecdc4;
+}
+
+.content-3:hover {
+    border: solid 3px #f9a825;
+}
+
+.content-4:hover {
+    border: solid 3px #5e9cff;
+}
+
+.content-5:hover {
+    border: solid 3px #9b59b6;
+}
+
+.content-6:hover {
+    border: solid 3px #7cb342;
+}
+
+.description,
+.btn-content {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.description {
+    font-weight: 400;
+    color: #666;
+}
+
+.btn-content {
+    margin-top: 15px;
+    font-weight: 500;
+    color: #2196f3;
+    text-decoration: none;
+    display: inline-block;
+}
