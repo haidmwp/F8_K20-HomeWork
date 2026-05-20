@@ -1,0 +1,161 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+ul[role='list'], ol[role='list'] {
+    list-style: none;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.content-wrapper {
+    padding: 24px;
+    background: #000;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(4, 250px);
+    gap: 24px;
+}
+
+.content {
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+}
+
+.content-1 {
+    padding: 24px;
+}
+
+.content-1,
+.content-4,
+.content-6,
+.content-8 {
+    color: #FFF;
+    background: #FF6400;
+}
+
+.content-2,
+.content-3,
+.content-5,
+.content-7 {
+    background: #8BB8F6;
+}
+
+.img-content-9 {
+    border-radius: 24px;
+}
+
+.content-1,
+.content-4 {
+    grid-row: span 2;
+}
+
+.content-5 {
+    grid-row: span 2;
+}
+
+.content-6 {
+    grid-row: 2 / 4;
+    grid-column: 2 / 4;
+}
+
+.content-9 {
+    grid-column: span 2;
+}
+
+.title {
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.number {
+    font-size: 36px;
+    line-height: 1.5;
+}
+
+.img-content-1 {
+    top: 24px;
+    right: -55px;
+    height: 250px;
+    object-fit: cover;
+    position: absolute;
+}
+
+.content-1 .info {
+    left: 24px;
+    bottom: 24px;
+    position: absolute;
+}
+
+.img-content-2 {
+    top: -60%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 150px;
+    position: absolute;
+}
+
+.img-content-3 {
+    left: 0;
+    right: 0;
+    bottom: -40px;
+    margin: auto;
+    width: 150px;
+    position: absolute;
+}
+
+.content-4,
+.content-6,
+.content-7,
+.content-8 {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-4 .title,
+.content-8 .title {
+    margin-bottom: 12px;
+}
+
+.img-content-5 {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 200px;
+    max-width: 100%;
+    position: absolute;
+}
