@@ -1,0 +1,51 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+.content-wrapper {
+    margin: 20px;
+    width: 500px;
+    height: 500px;
+    border: solid 2px red;
+    position: relative;
+}
+
+.moving-arrow {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    offset-path: rect(0% 100% 100% 0%);
+    animation: moveAroundSquare 5s linear infinite;
+}
+
+@keyframes moveAroundSquare {
+    0% {
+        offset-distance: 0%;
+    }
+    25% {
+        offset-distance: 25%;
+    }
+    50% {
+        offset-distance: 50%;
+    }
+    75% {
+        offset-distance: 75%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+}
