@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bài tập buổi 11</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="page" class="site">
+            <header class="header">
+                <h1 class="header__logo"><img alt="logo" src="images/logo.png" /></h1>
+                <nav class="header__nav">
+                    <ul>
+                        <li>
+                            <button class="header__close">
+                                <input type="radio" id="nav__close-btn" class="nav__close hidden" name="menu">
+                                <label for="nav__close-btn" class="nav__close-btn">
+                                    X
+                                </label>
+                            </button>
+                        </li>
+                        <li><a class="nav__link" href="#">Link 1</a></li>
+                        <li><a class="nav__link" href="#">Link 2</a></li>
+                        <li><a class="nav__link" href="#">Link 3</a></li>
+                    </ul>
+                </nav><!-- .header__nav -->
+                <button class="dark-mode-toggle" onclick="darkModeToggle()">
+                    <img alt="dark mode" class="img-dark-mode" src="images/icon-darkmode.png" />
+                </button>
+                <button class="header__hamburger">
+                    <input type="radio" id="nav__open-btn" class="nav__open hidden" name="menu">
+                    <label for="nav__open-btn" class="nav__open-btn">
+                        &#9776;
+                    </label>
+                </button>
+            </header><!-- .header -->
+
+            <div class="container">
+                <div class="container__content">
+                    <h2 class="container__heading">This is the main heading</h2>
+                    <div class="container__paragraph">
+                        <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.</p>
+                        <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+                        Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <h3 class="card__header">Card One</h3>
+                            <div class="card__body">
+                                <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card__header">Card Two</h3>
+                            <div class="card__body">
+                                <p>Daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card__header">Card Three</h3>
+                            <div class="card__body">
+                                <p>Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card__header">Card Four</h3>
+                            <div class="card__body">
+                                <p>Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card__header">Card Five</h3>
+                            <div class="card__body">
+                                <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
+                                turnip greens parsnip.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .container__content -->
+                <div class="container__sidebar">
+                    <p>Have you discovered all of the other excellent content on this website?</p>
+                </div><!-- .container__sidebar -->
+            </div><!-- .container -->
+        </div><!-- #page -->
+    </body>
+
+    <script>
+    function darkModeToggle() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+    </script>
+</html>
