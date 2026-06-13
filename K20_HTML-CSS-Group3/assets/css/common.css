@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #caff33;
+    --primary-background: #1a1a1a;
+    --background-component: #1c1c1c; /* VD: background navbar menu, hero ... */
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: var(--primary-background);
+}
