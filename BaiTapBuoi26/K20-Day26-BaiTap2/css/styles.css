@@ -55,7 +55,7 @@ body {
 
 .tabs-container {
     background: #FFF;
-    border-radius: 0px;
+    border-radius: 8px;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
     overflow: hidden;
     border: 1px solid var(--border-color);
