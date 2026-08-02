@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ứng dụng Todo List</title>
+        <link rel="stylesheet" href="css/cau1.css">
+    </head>
+    <body>
+        <div class="btn-back-wrapper">
+            <a href="index.html" class="back-link">← Quay lại</a>
+        </div>
+        <div class="todo-app">
+            <h1 class="content-title">Quản Lý Công Việc</h1>
+
+            <!-- Bộ lọc todo -->
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">Tất cả</button>
+                <button class="filter-btn" data-filter="uncompleted">Chưa hoàn thành</button>
+                <button class="filter-btn" data-filter="completed">Hoàn thành</button>
+            </div>
+
+            <!-- Form thêm todo mới -->
+            <div class="input-section">
+                <div class="input-wrapper">
+                    <input type="text" id="todo-input" placeholder="Nhập công việc cần làm..." autocomplete="off">
+                    <button id="add-btn">Thêm</button>
+                </div>
+                <div id="error-message" class="error-text"></div>
+            </div>
+
+            <!-- Danh sách công việc -->
+            <ul id="todo-list" class="todo-list"></ul>
+
+            <!-- Thống kê và Xóa tất cả -->
+            <div class="footer-section">
+                <span id="todo-stats">0/0 mục đã hoàn thành</span>
+                <button id="clear-completed-btn" class="hidden">Xóa tất cả đã xong</button>
+            </div>
+        </div>
+
+        <script src="js/cau1.js"></script>
+    </body>
+</html>
